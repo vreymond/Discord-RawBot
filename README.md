@@ -6,6 +6,8 @@
 
 Discord bot, named RawBot, a manager of a movies / series Discord server.
 
+The bot is online 24/7 and hosted by Heroku.
+
 
 
 ## Getting Started

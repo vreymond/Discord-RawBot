@@ -1,16 +1,17 @@
 let Discord = require('discord.js');
 let bot = new Discord.Client();
-let Google = require('./commands/google');
+let Commands = require('./commands/commands');
 
-
+// Login using the unique Bot token
 bot.login(process.env.BOT_TOKEN);
 
 
-
+// Setting the activity of the Bot on the server
 bot.on('ready', () => {
     bot.user.setActivity('Search the Matrix')
 })
 
+// Bot reception for news members
 bot.on('guildMemberAdd', member => {
     member.createDM()
     .then(channel => {
@@ -19,16 +20,20 @@ bot.on('guildMemberAdd', member => {
     .catch(console.error)
 })
 
+// Bot messages features
 bot.on('message', message => {
-    if (Google.match(message)) {
+    // Message reply for the "rb!google" command
+    if (Commands.matchGoogle(message)) {
         return Google.action(message);
     }
-    if (Google.match2(message)) {
+
+    // Message reply for the "rb!gif" command
+    if (Commands.matchGif(message)) {
         return Google.gifGenerator(message);
     }
 
-    if (message.content === '!ping') {
+    // Message reply for the "rb!ping" command
+    if (message.content === 'rb!ping') {
         message.reply('pong');
-        //message.channel.send('pong');
     }
 })
