@@ -1,0 +1,35 @@
+{
+  "name": "discord-rawbot",
+  "version": "0.0.1",
+  "description": "Discord bot for a movies/series Discord server",
+  "main": "bot.js",
+  "scripts": {
+    "start": "node bot.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vreymond/Discord-RawBot.git"
+  },
+  "keywords": [
+    "bot",
+    "discord",
+    "movie",
+    "serie",
+    "series",
+    "movies",
+    "server",
+    "javascript",
+    "rawbot",
+    "raw"
+  ],
+  "author": "Valentin Reymond",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/vreymond/Discord-RawBot/issues"
+  },
+  "homepage": "https://github.com/vreymond/Discord-RawBot#readme",
+  "dependencies": {
+    "discord.js": "^11.4.2",
+    "node-fetch": "^2.3.0"
+  }
+}
